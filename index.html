@@ -16,6 +16,7 @@
   <meta name="theme-color" content="#ffffff">
   <link href="./assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="./assets/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="./include/css/animate.min.css" rel="stylesheet" type="text/css">
   <link href="./assets/css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -50,15 +51,14 @@
   </div>
   <section>
     <div class="full_banner">
-      <img src="./assets/images/awak.png" class="img-fluid image_one" alt="Iron Market">
-      <img src="./assets/images/angan-sap.png" class="img-fluid image_two" alt="Iron Market">
-      <img src="./assets/images/pasir.png" class="img-fluid image_sand" alt="Iron Market">
-      <img src="./assets/images/pasir.png" class="img-fluid image_sand2" alt="Iron Market">
+      <img src="./assets/images/awak.png" id="one" class="img-fluid image_one" alt="Iron Market">
+      <img src="./assets/images/angan-sap.png" id="two" class="img-fluid image_two" alt="Iron Market">
+      <img src="./assets/images/pasir.png" id="three" class="img-fluid image_sand" alt="Iron Market">
       <div class="banner_content">
         <h2>Verify & <br>Manage Assets</h2>
         <div class="banner_content_button">
-          <a href=""><button class="btn banner_book_btn">Book Verification</button></a>
-          <a href=""><button class="btn banner_sale_btn">View Assets for Sale</button></a>
+          <a href=""><button class="btn banner_book_btn animate__bounceIn">Book Verification</button></a>
+          <a href=""><button class="btn banner_sale_btn animate__bounceIn">View Assets for Sale</button></a>
           <p>Correct, Manage & Transact</p>
         </div>
       </div>
@@ -67,7 +67,7 @@
   <section>
     <div class="content_bg">
       <div class="yellow_color">
-        <div>
+        <div class="wow animate__animated animate__fadeInLeft">
         <p>Personal Property Assets are extremely valuable to your portfolio.
           A personal approach to managing assets that provides a piece of mind throughout the entire process.</p>
         </div>
@@ -81,25 +81,25 @@
         <div class="col-lg-4 clo-md-6 col-12"></div>
           <div class="col-lg-8 clo-md-6 col-12">
             <div class="row">
-              <div class="col-lg-6 col-md-6 col-12">
+              <div class="col-lg-6 col-md-6 col-12 wow animate__animated animate__bounce animate__backInRight">
                 <div class="key_point_list">
                   <h2>Flexible Options</h2>
                   <p>Maintain control on your assets</p>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-12">
+              <div class="col-lg-6 col-md-6 col-12 wow animate__animated animate__backInRight">
                 <div class="key_point_list">
                   <h2>Smart Quotes</h2>
                   <p>Know what your are paying for No hidden fees</p>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-12">
+              <div class="col-lg-6 col-md-6 col-12 wow animate__animated animate__backInRight">
                 <div class="key_point_list">
                   <h2>Fully Customizable</h2>
                   <p>Control all aspects of your management journey</p>
                 </div>
               </div>
-              <div class="col-lg-6 col-md-6 col-12">
+              <div class="col-lg-6 col-md-6 col-12 wow animate__animated animate__backInRight">
                 <div class="key_point_list">
                   <h2>Personalized</h2>
                   <p>Receive full support from our dedicated staff</p>
@@ -114,10 +114,10 @@
     <div class="container">
       <div class="row">
         <div class="footer_section">
-          <div>
+          <div class="wow animate__animated animate__bounceIn">
             <a href="#"><img src="./assets/images/footer_logo.png" class="img-fluid" alt="Iron Market"></a>
           </div>
-          <div class="footer_social">
+          <div class="footer_social wow animate__animated animate__bounceIn">
             <ul>
               <li><a href=""><i class="fa-brands fa-twitter"></i></i></a></li>
               <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
@@ -141,8 +141,20 @@
       </div>
     </div>
   </section>
-  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script>
+    let one = document.getElementById('one');
+    let two = document.getElementById('two');
+    let three = document.getElementById('three');
+
+    window.addEventListener('scroll', function(){
+      let value = window.scrollY;
+      one.style.left = value * 0.4 + 'px';
+      two.style.top = value * 0.5 + 'px';
+    })
+  </script>
   <script src="./js/jquery.min.js"></script>
-  <script src="./js/index.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/wow.min.js"></script>
+  <script src="./js/custom.js"></script>
 </body>
 </html>
